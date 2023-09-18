@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to emoji</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/687457378a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main">
+    <div class="head">
+        <h1>Text <span><img id="arrow" src="white arrow.png" alt=""></span>
+        Emoji</h1>
+
+                
+    </div>
+    <div id="box">
+        <button class="b1"><i class="fa-solid fa-lock"></i>  Encrypt Text</button>
+        <button class="b2"><i class="fa-solid fa-lock-open"></i> Decrypt Text</button>
+    </div>
+    <div id="form">
+        <div id="encr">
+        <h4 id="mess">1. Type a message</h4>
+        <textarea name="" placeholder="Please write here" id="textmess" cols="50" rows="2"></textarea>
+        
+        <h4>2. Set a password</h4>
+        <input type="password" placeholder="eg. 123" id="pass">
+        <h4 id="Encrypt">3. Encrypt message</h4>
+        <button class="b3"><i class="fa-solid fa-lock"></i>  Encrypt Text</button>
+    </div>
+           <div id="decr">
+        <h4 id="mess">1. Past the Decrpted emoji</h4>
+        <textarea name="" placeholder="Please write here" id="emojimess" cols="50" rows="2"></textarea>
+        
+        <h4>2. Enter the password</h4>
+        <input type="password" placeholder="eg. 123" id="pass">
+        <h4 id="decrypt">3.Decrypt message</h4>
+        <button class="b4"><i class="fa-solid fa-lock-open"></i> Decrypt Text</button>
+    </div>
+        <div id="result">
+
+        </div>
+        <button id="clearbtn">clear</button>
+    </div>
+    <div class="footer">
+    <h4>Made by Sakshi <i class="fa-solid fa-face-grin-wink"></i> </h4>
+</div>
+</div>
+    <script src="index.js"></script>
+    
+</body>
+</html>

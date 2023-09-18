@@ -1,0 +1,131 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: black;
+    color: white;
+   
+    
+}
+#main{
+    position: relative;
+    justify-content:center;
+    text-align: center;
+    width: 700px;
+    left: 30%;
+}
+.head{
+    position: relative;
+    justify-content:center;
+    text-align: center;
+    display: flex;
+    gap: 25px;
+    
+    font-size: 2.1em;
+    padding: 30px;
+}
+.head img{
+    padding: 7px;
+    margin-top:6px;
+    font-size: 2.2em;
+    width: 90px;
+}
+#box{
+    gap: 10px;
+    padding: 13px; 
+    background-color: rgba(43, 42, 42, 0.632);
+    border-radius: 20px; 
+    padding: 20px;
+    width: 400px;
+    margin-left: 130px;
+    display: flex;
+   
+}
+.b1{
+    border-radius: 7px;
+    padding: 3px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.689);
+    color: white;
+}
+.b2{
+    border-radius: 7px;
+    padding: 3px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(157, 156, 156, 0.523);
+    color: white;
+}
+#decr{
+    display: none;
+}
+#decr h4,input{
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 400px;
+}
+#decr #emojimess{
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.3em;
+}
+#encr{
+    display: none;
+}
+#encr h4,input{
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 400px;
+}
+#encr textarea{
+    border-radius: 20px;
+}
+.b3 ,.b4
+{
+    border-radius: 7px;
+    padding: 3px;
+    width: 400px;
+    height: 40px;
+    background-color: rgba(157, 156, 156, 0.733);
+    color: white;
+}
+
+#textmess{
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+
+
+#result{
+    padding: 5px;
+    border-radius: 20px;
+    margin: 15px;
+    margin-left: 130px;
+    width: 400px;
+    height: 50px;
+    font-size: 1.4em;
+}
+#clearbtn{
+    border-radius: 20px;
+    padding: 10px;
+    width: 350px;
+    height: 40px;
+    background-color: rgba(157, 156, 156, 0.733);
+    color: white;
+
+}
+.footer i{
+    color: yellow;
+    padding: 3px;
+    font-size: 25px;
+}
+.footer{
+    padding: 30px;
+    font-weight: lighter;
+    
+}
