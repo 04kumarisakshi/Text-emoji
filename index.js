@@ -25,28 +25,29 @@ function btnclicking(){
             clear()
         })
         document.querySelector("#clearbtn").addEventListener("click",function(){
-                clutter=""
-                document.querySelector("#result").innerHTML= clutter
+                let c=""
+                document.querySelector("#result").innerHTML= c
             })
         
 };
 btnclicking()
 
 
-var clutter=""
+var clutter="";
 
 function encryption(){
     btn3.addEventListener("click", function(){
     
    var input = document.getElementById("textmess").value
-   var password = document.getElementById("pass").value
+   var password = document.getElementById("pass1").value
    const str =input.split("")
    str.forEach(element => {
        clutter +=`&#128${element.charCodeAt()}`
    });
+
    btn3.addEventListener("click",function(){
-    document.querySelector("#result").style.display="block"
     document.querySelector("#result").innerHTML= clutter
+    document.querySelector("#result").style.display="block"
     document.querySelector("#result").style.backgroundColor="rgba(111, 110, 110, 0.296)"
 })
    document.querySelector("#result").innerHTML=clutter
@@ -58,34 +59,36 @@ function encryption(){
   else{
     dat =[{"passsword":password,"input":input,"clutter":clutter}]
   }
-  localStorage.setItem('data1',JSON.stringify(dat))
+  localStorage.setItem(`data1`,JSON.stringify(dat))
    
     })
 }
  
-encryption()
-var clutter2=""
+encryption();
 function decryption(){
     btn4.addEventListener("click",function(){
            
-   var input2 = document.getElementById("emojimess").value
- var password2 = document.getElementById("pass2").value
-   const str2 =input2.split("")
-   console.log(input2)
+   var input2 = document.getElementById("emojimess").value;
+   var password2 = document.getElementById("pass2").value;
+   var user = JSON.parse(localStorage.getItem('data1'));
+   const str2 =input2.split("");
+   var clutter2="";
    str2.forEach(element => {
-       clutter2 +=`&#${element.CodepointAt(0)}`
-       console.log(clutter2)
+       clutter2 +=`&#${element.codePointAt(0)}`
+       
    });
+   
    
    var found ;
    for(let i of user)
    {
-    if(i.clutter == clutter2){
-        found=i
+    if(i.passsword === password2){
+        found=i;
+        break;
     }
    }
-   if(found.clutter === clutter2){
-    document.querySelector("#result").style.display ="block"
+   if(found && (found.passsword == password2)){
+    document.querySelector("#result").style.displlogay ="block"
     document.querySelector("#result").innerHTML =found.input
    }
    else{
@@ -95,6 +98,7 @@ function decryption(){
     })
     
 }
+decryption();
 
 function clear(){
     clutter=""
